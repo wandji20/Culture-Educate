@@ -12,3 +12,17 @@
  *
  */
 @import "bootstrap";
+nav a {
+  color: #36302e;
+}
+
+.navbar-nav {
+  flex-direction: row;
+}
+.nav-link {
+  margin: auto 0.4em;
+}
+
+li {
+  list-style: none;
+}
