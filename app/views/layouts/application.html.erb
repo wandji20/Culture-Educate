@@ -11,6 +11,9 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container-fluid">
+      <p class="row bg-white justify-content-center"> <%= flash_message %> </p>
+      <%= yield %>
+    </div>
   </body>
 </html>
