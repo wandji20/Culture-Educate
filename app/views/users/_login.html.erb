@@ -1,0 +1,8 @@
+
+<section class = 'justify-center'>
+  <%= form_for @user do |f|%>
+    <%= f.label :name, 'Name', class: 'form-label' %>
+    <%= f.text_field :name, placeholder: 'Input name', class:'form-control'%>
+    <%= f.submit 'Sign Up' %>
+  <% end %>
+</section>
