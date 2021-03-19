@@ -1,0 +1,7 @@
+      Logo
+primary: #36302e
+secondary: #b34614
+color: #191919
+background-color: #f9f9f9;
+    Font
+font-family: "acumin-pro","Acumin Pro","Helvetica Neue",Helvetica,Arial,sans-serif
