@@ -12,3 +12,49 @@
  *
  */
 @import "bootstrap";
+
+nav {
+  margin: auto -15px;
+}
+
+nav a {
+  color: #36302e;
+}
+
+nav a:hover,
+footer a:hover {
+  color: #f76208;
+}
+
+.navbar-nav {
+  flex-direction: row;
+}
+
+.nav-link {
+  margin: auto 0.4em;
+}
+
+li {
+  list-style: none;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 80%;
+  background: #36302e;
+  margin: 0;
+  height: 60px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.primary-color {
+  color: #36302e;
+}
+
+.secondary-color {
+  color: #f76208;
+}

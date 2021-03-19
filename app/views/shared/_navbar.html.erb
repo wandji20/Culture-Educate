@@ -1,0 +1,31 @@
+<nav class="navbar bg-light">
+  <%= link_to root_path class: "col-sm-3" do %>
+    <h5>CultureEducate</h5>
+  <% end %>
+
+  <ul class="navbar-nav">
+    <% if current_user %>
+      <%= link_to current_user do %>
+          <li class="nav-link"><%= current_user.name.upcase %></li>
+      <% end %>
+    <% end %>
+    <%= link_to root_path do %>
+      <li class="nav-link">NEW ARTICLE</li>
+    <% end %>
+  </ul>
+  <ul class="navbar-nav">
+
+    <% if current_user %>
+      <%= link_to session_path('active'), method: :delete do %>
+        <li class="nav-link">LOG OUT</li>
+      <% end %>
+    <% else %>
+      <%= link_to new_user_path do %>
+        <li class="nav-link">SIGN UP</li>
+      <% end %>
+      <%= link_to new_session_path do %>
+        <li class="nav-link">LOG IN</li>
+      <% end %>
+    <% end %>
+  </ul>
+</nav>
