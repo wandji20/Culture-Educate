@@ -1,8 +1,10 @@
-<footer>
+<footer class='px-3'>
 
-  <%= link_to 'CultureEducate', root_path, class: 'my-auto' %>
+  <p class='my-auto'>
+    <%= link_to 'CultureEducate', root_path, class: 'my-auto text-white' %>
+  </p>
 
-  <ul class="d-flex my-auto">
+  <ul class="d-none d-md-flex my-auto">
     <%= link_to root_path do %>
       <li class="link secondary-color">Privacy</li>
     <% end %>
@@ -16,7 +18,7 @@
       <li class="text-white">All rights reserved.</li>
   </ul>
   <ul class="d-flex my-auto">
-    <li >contact us with:</li>
+    <li class='text-white' >contact us with:</li>
    
     <%= link_to root_path  do %>
       <li class="link secondary-color">twitter icon</li>

@@ -1,10 +1,10 @@
 
-<section class = 'row d-flex justify-content-center align-items-center'>
+<div class = 'row d-flex justify-content-center sign-up-form'>
   <div class="col-sm-8 col-md-5 ">
     <%= form_for @user do |f|%>
-      <%= f.label :name, 'Name', class: 'form-label' %>
-      <%= f.text_field :name, placeholder: 'Input name', class:'form-control'%>
+      <%= f.label :name, 'Name', class: 'form-label mb-2' %>
+      <%= f.text_field :name, placeholder: 'Input name', class:'form-control mb-2'%>
       <%= f.submit 'Sign Up' %>
     <% end %>
   </div>
-</section>
+</div>
