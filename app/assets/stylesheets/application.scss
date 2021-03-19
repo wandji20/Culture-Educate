@@ -26,3 +26,21 @@ nav a {
 li {
   list-style: none;
 }
+footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 80%;
+  background: #36302e;
+  margin-bottom: 0;
+  height: 60px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.primary-color {
+  color: #36302e;
+}
+.secondary-color {
+  color: #f76208;
+}
