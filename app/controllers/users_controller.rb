@@ -10,10 +10,10 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       redirect_to root_path,
-      notice: "Welcome #{@user.name}\n Your Account is Ready"
+                  notice: "Welcome #{@user.name}\n Your Account is Ready"
     else
       render :new,
-      alert: "#{@user.name} is already taken\n Please input a name"
+             alert: "#{@user.name} is already taken\n Please input a name"
     end
   end
 
@@ -22,6 +22,7 @@ class UsersController < ApplicationController
   end
 
   private
+
   def user_params
     params.require(:user).permit(:name)
   end

@@ -12,9 +12,11 @@
  *
  */
 @import "bootstrap";
+
 nav {
   margin: auto -15px;
 }
+
 nav a {
   color: #36302e;
 }
@@ -27,6 +29,7 @@ footer a:hover {
 .navbar-nav {
   flex-direction: row;
 }
+
 .nav-link {
   margin: auto 0.4em;
 }
@@ -47,9 +50,11 @@ footer {
   right: 0;
   bottom: 0;
 }
+
 .primary-color {
   color: #36302e;
 }
+
 .secondary-color {
   color: #f76208;
 }
