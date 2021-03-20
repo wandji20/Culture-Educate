@@ -20,6 +20,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @authored_articles = current_user.authored_articles.includes(:categories, :author)
   end
 
   private
