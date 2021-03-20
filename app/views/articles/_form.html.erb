@@ -1,12 +1,13 @@
 <div class="row justify-content-center">
-  <div class="col">
+  <div class="col-4">
     <%= form_for @article do |f| %>
-      <%= f.label :title %>
-      <%= f.text_field :title %>
-      <%= f.label :body %>
-      <%= f.text_area :body %>
 
-      <%= f.submit %>
+      <%= f.label :title, class:'form-label mb-1' %>
+      <%= f.text_field :title, class:'form-control mb-1' %>
+      <%= f.label :body, class:'form-label mb-1' %>
+      <%= f.text_area :body, class:'form-control mb-1' %>
+
+      <%= f.submit class:'form-btn btn-info mt-1' %>
     <% end %>
     
   </div>
