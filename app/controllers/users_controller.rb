@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :sign_in, except: [:new, :create]
+
   def index; end
 
   def new
@@ -24,5 +26,9 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:name)
+  end
+
+  def sign_in
+    redirect_to new_session_path unless current_user
   end
 end

@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  before_action :set_article
   def new
     @article = current_user.authored_articles.new
     @article.categories.new
@@ -20,5 +21,11 @@ class ArticlesController < ApplicationController
   private
   def article_params
     params.require(:article).permit(:title, :body, :category_ids =>[], categories_attributes: [:id, :name])
+  end
+
+  def set_article
+    unless current_user
+      redirect_to new_session_path
+    end
   end
 end
