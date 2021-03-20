@@ -1,0 +1,13 @@
+<div class="row justify-content-center">
+  <div class="col">
+    <%= form_for @article do |f| %>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+      <%= f.label :body %>
+      <%= f.text_area :body %>
+
+      <%= f.submit %>
+    <% end %>
+    
+  </div>
+</div>
