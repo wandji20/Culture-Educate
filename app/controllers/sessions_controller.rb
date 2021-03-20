@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     if @user
       session[:user_id] = @user.id
       redirect_to root_path,
-                  notice: "Welcome @user.name\n You have successfully signed in"
+                  notice: "Welcome #{current_user.name}\n You have successfully signed in"
     else
       render :new,
              alert: 'Please Enter a valid name'

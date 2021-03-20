@@ -1,11 +1,13 @@
 class ArticlesController < ApplicationController
   def new
     @article = current_user.authored_articles.new
+    @article.categories.new
   end
 
   def create
-    @article = currrent_user.authored_articles.build(article_params[:article])
-    if @aricle.save
+    @article = current_user.authored_articles.new article_params
+
+    if @article.save
       redirect_to root_path,
       notice: 'Article successfully created'
     else
@@ -16,6 +18,6 @@ class ArticlesController < ApplicationController
 
   private
   def article_params
-    params.permit(:article).require(:article, :category_attributes)
+    params.require(:article).permit(:title, :body, categories_attributes: [:name])
   end
 end

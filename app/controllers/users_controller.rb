@@ -10,10 +10,9 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       redirect_to root_path,
-                  notice: "Welcome #{@user.name}\n Your Account is Ready"
+                  notice: "Welcome #{current_user.name}\n Your Account is Ready"
     else
-      render :new,
-             alert: "#{@user.name} is already taken\n Please input a name"
+      render :new
     end
   end
 
