@@ -8,6 +8,8 @@ gem 'bootstrap', '~> 4.6'
 gem 'jquery-rails', '~> 4.4'
 gem 'sprockets-rails', '~> 3.2', '>= 3.2.2'
 
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.7'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3'
 # Use postgresql as the database for Active Record

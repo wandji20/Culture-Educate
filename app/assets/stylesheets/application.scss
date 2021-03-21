@@ -11,6 +11,10 @@
  * It is generally better to create a new file per style scope.
  *
  */
+/*
+ *= require font-awesome
+ */
+
 @import "bootstrap";
 .color-bg {
   background-color: #36302e;
@@ -44,7 +48,7 @@ li {
 footer {
   display: flex;
   justify-content: space-between;
-  font-size: 80%;
+  // font-size: 80%;
   background: #36302e;
   margin: 0;
   height: 60px;
@@ -52,6 +56,10 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+.fa {
+  margin: auto 10px;
 }
 
 .primary-color {
