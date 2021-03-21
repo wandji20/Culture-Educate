@@ -3,6 +3,7 @@ class ArticlesController < ApplicationController
 
   def index
     @categories = Category.all.includes(:articles)
+    @most_popular = Article.first
   end
 
   def new

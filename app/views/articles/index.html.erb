@@ -1,18 +1,23 @@
-<div class="row">
-  <div class="col-9">
-  </div>
-  <div class="col-3">
-  </div>
-</div>
-<section class="row justify-content-center">
-  <% @categories.each do |category| %>
-    <div class="col-3 d-flex flex-column">
-      <h5><%= category.name %></h5>
-      
-      <% if category.articles.order(:created_at).first %>
-        <h6><%= category.articles.order(:created_at).first.title %></h6>
-      <% end %>
-    
+<div class="mt-5 color-bg w-100">
+  <div class="row">
+    <div class="col-9">
+    <h4> <%= @most_popular.categories.first.name %></h4>
+    <h5><%= @most_popular.title %></h5>
     </div>
-  <% end %>
-</section>
+    <div class="col-3">
+    <p>something extra I like</p>
+    </div>
+  </div>
+  <section class="row justify-content-center align-items-end mb-0">
+    <% @categories.each do |category| %>
+      <div class="col-3 d-flex flex-column">
+        <h5><%= category.name %></h5>
+        
+        <% if category.articles.order(:created_at).first %>
+          <h6><%= category.articles.order(:created_at).first.title %></h6>
+        <% end %>
+      
+      </div>
+    <% end %>
+  </section>
+</div>
