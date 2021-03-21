@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-9">
+  </div>
+  <div class="col-3">
+  </div>
+</div>
+<section class="row justify-content-center">
+  <% @categories.each do |category| %>
+    <div class="col-3 d-flex flex-column">
+      <h5><%= category.name %></h5>
+      
+      <% if category.articles.order(:created_at).first %>
+        <h6><%= category.articles.order(:created_at).first.title %></h6>
+      <% end %>
+    
+    </div>
+  <% end %>
+</section>

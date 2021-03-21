@@ -1,5 +1,10 @@
 class ArticlesController < ApplicationController
   before_action :set_article
+
+  def index
+    @categories = Category.all.includes(:articles)
+  end
+
   def new
     @article = current_user.authored_articles.new
     @article.categories.new
