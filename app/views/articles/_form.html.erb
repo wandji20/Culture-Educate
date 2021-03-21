@@ -16,6 +16,10 @@
         <%= f.label :body, class:'form-label mb-1' %>
         <%= f.text_area :body, class:'form-control mb-1', placeholder: 'Write about your culture' %>
       </div>
+      <div class="field">
+        <%= f.label :image %>
+        <%= f.file_field :image %>
+      </div>
 
       <div class="form-group">
         <%= f.collection_check_boxes(:category_ids, Category.all, :id, :name) %>

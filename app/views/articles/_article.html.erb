@@ -1,6 +1,6 @@
 <article class='d-flex col-6'>
-  <figure class='bg-success w-50 mr-2'>
-  
+  <figure class=' w-50 mr-2'>
+    <%= image_tag article.image_url, class: 'image' if article.image %>
   </figure>
   <div class='d-flex justify-content-center flex-column w-50 ml-2 bg-light'>
     <h5><%= article.categories.first.name %></h5>

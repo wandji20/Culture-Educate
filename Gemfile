@@ -10,6 +10,10 @@ gem 'sprockets-rails', '~> 3.2', '>= 3.2.2'
 
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.7'
 
+gem 'image_processing', '~> 1.2'
+gem 'shrine', '~> 3.3'
+gem "shrine-cloudinary", "~> 1.1"
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3'
 # Use postgresql as the database for Active Record
@@ -39,6 +43,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'rspec-rails'
+  gem 'dotenv-rails'
 end
 
 group :development do
