@@ -1,28 +1,30 @@
-<div class="mt-5  w-100">
-  <div class="row">
-    <div class="col-9">
-    
-    <% if @most_popular && @most_popular.categories.first %>
+<div class="mt-1  w-100">
+  <div class=" most-popular">
+    <article class="">
       
-      <h4> <%= link_to @most_popular.categories.first.name, @most_popular.categories.first %></h4>
-    <h5><%= @most_popular.title %></h5>
-    <% end %>
-    
-    </div>
-    <div class="col-3">
+        <%= image_tag @most_popular.image_url, class: 'image' if @most_popular.image %>
+
+      <% if @most_popular && @most_popular.categories.first %>
+        
+        <h4> <%= link_to @most_popular.categories.first.name, @most_popular.categories.first %></h4>
+        <h5><%= @most_popular.title %></h5>
+      <% end %>    
+    </article>
+    <div class="side-content">
     <p>something extra I like</p>
     </div>
   </div>
-  <section class="row justify-content-center align-items-end mb-0">
+  <section class="top-category">
     <% @categories.each do |category| %>
-      <div class="col-3 d-flex flex-column">
-        <h5><%= link_to category.name, category %></h5>
+      <article class="">
         
         <% if category.articles.order(:created_at).first %>
-          <h6><%= category.articles.order(:created_at).first.title %></h6>
+          <%= image_tag category.articles.order(:created_at).last.image_url, class: 'image' if category.articles.order(:created_at).last.image %>
+          <h5><%= link_to category.name, category %></h5>
+          <h6><%= category.articles.order(:created_at).last.title %></h6>
         <% end %>
       
-      </div>
+      </article>
     <% end %>
   </section>
 </div>

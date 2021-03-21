@@ -16,14 +16,22 @@
         <%= f.label :body, class:'form-label mb-1' %>
         <%= f.text_area :body, class:'form-control mb-1', placeholder: 'Write about your culture' %>
       </div>
-      <div class="field">
-        <%= f.label :image %>
+      <div class="field form-group">
+        <%= f.label :image , 'Add article cover image', class: 'form-label'%>
         <%= f.file_field :image %>
       </div>
 
-      <div class="form-group">
-        <%= f.collection_check_boxes(:category_ids, Category.all, :id, :name) %>
+      <div class="form-group mt-2 ">
+        <%= f.label :categories, 'Add Article Categories', class: 'form-label'%>
+        <div>
+          <%= f.collection_check_boxes(:category_ids, Category.all, :id, :name) do |b| %>
+            <%= b.label class:"form-check-label mx-1" do%>
+            <%=b.check_box + "  " + b.text%>
+            <%end%>
+          <% end %>
+        </div>
       </div>
+    
   <!--
       <%= f.fields_for :categories do |c| %>
         <div class="form-group">
