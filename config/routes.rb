@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'votes/new'
+  get 'votes/create'
+  get 'votes/destroy'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root 'articles#index'
   resources :users, only: [:index, :create, :new, :show]
