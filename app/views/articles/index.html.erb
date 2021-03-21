@@ -1,7 +1,7 @@
-<div class="mt-5 color-bg w-100">
+<div class="mt-5  w-100">
   <div class="row">
     <div class="col-9">
-    <h4> <%= @most_popular.categories.first.name %></h4>
+    <h4> <%= link_to @most_popular.categories.first.name, @most_popular.categories.first %></h4>
     <h5><%= @most_popular.title %></h5>
     </div>
     <div class="col-3">
@@ -11,7 +11,7 @@
   <section class="row justify-content-center align-items-end mb-0">
     <% @categories.each do |category| %>
       <div class="col-3 d-flex flex-column">
-        <h5><%= category.name %></h5>
+        <h5><%= link_to category.name, category %></h5>
         
         <% if category.articles.order(:created_at).first %>
           <h6><%= category.articles.order(:created_at).first.title %></h6>

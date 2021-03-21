@@ -1,0 +1,17 @@
+<Section class="mt-4 ">
+  <h3 class="row justify-content-center"> <%= @category.name %></h3>
+  <div class="d-flex">
+    <% @articles.each do |article| %>
+      
+      <article class='d-flex col-6'>
+        <figure class='bg-success w-50 mr-2'>
+        
+        </figure>
+        <div class='d-flex justify-content-center flex-column w-50 ml-2 bg-light'>
+          <h6><%= article.title %></h6>
+          <p><%= article.body %></p>
+        </div>
+      </article>
+    <% end %>
+  </div>
+</section>
