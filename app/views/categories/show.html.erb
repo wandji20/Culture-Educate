@@ -1,13 +1,13 @@
-<Section class="mt-4 ">
+<section class="mt-4 ">
   <h3 class="row justify-content-center"> <%= @category.name %></h3>
-  <div class="d-flex">
+  <div class="article_section">
     <% @articles.each do |article| %>
       
-      <article class='d-flex col-6'>
-        <figure class=' w-50 mr-2'>
+      <article class=''>
+        <figure class=''>
           <%= image_tag article.image_url, class: 'image' if article.image %>        
         </figure>
-        <div class='d-flex justify-content-center flex-column w-50 ml-2 bg-light'>
+        <div class=' bg-light'>
           <h6><%= article.title %></h6>
           <p><%= article.body %></p>
         </div>

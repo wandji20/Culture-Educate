@@ -70,7 +70,29 @@ footer {
   color: #f76208;
 }
 
-article .image {
-  width: auto;
-  height: 35vh;
+.article_section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
+}
+
+.article_section article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3px;
+  border: 1px solid black;
+}
+
+// .article_section figure,
+article,
+figure {
+  width: 100%;
+  height: 30vh;
+  border: 1px dotted brown;
+}
+
+img.image {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
 }
