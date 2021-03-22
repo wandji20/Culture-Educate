@@ -15,6 +15,22 @@ module ApplicationHelper
     end
   end
 
+  def signed_in_details
+    if current_user
+      'layout/signed_in_details'
+    else
+      'shared/empty'
+    end
+  end
+
+  def signed_out_details
+    if current_user
+      'layout/signed_out_details'
+    else
+      'shared/empty'
+    end
+  end
+
   def upvote_or_downvote(article)
     @vote = Vote.find_by(article: article, user: current_user)
     unless @vote
