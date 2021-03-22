@@ -7,12 +7,11 @@
         <figure class=''>
           <%= image_tag article.image_url, class: 'image' if article.image %>        
         </figure>
-        <div class=' bg-light'>
+        <div class=' bg-light article_details'>
           <h6><%= article.title %></h6>
           <p><%= article.body %></p>
-          <div>
-            <span><%= link_to 'Upvote', votes_path(article_id: article.id, category_id: params[:id]), method: :post%></span>
-            <span><%= link_to 'Downvote', vote_path(article_id: article.id, category_id: params[:id]), method: :delete  %></span>
+          <div class='article_vote'>
+            <span><%= upvote_or_downvote(article) %></span>
           </div>
         </div>
       </article>
