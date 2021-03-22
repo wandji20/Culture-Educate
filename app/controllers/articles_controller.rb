@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
     @category_article = Category.includes(:articles).order(priority: :desc).map do |category|
       [category, category.articles.last]
     end
-    @most_popular = Vote.group(:article).count.first[0]
+    @most_popular = Vote.group(:article).count.first ?  Vote.group(:article).count.first[0] : Article.order(created_at: :desc).first
   end
 
   def show
