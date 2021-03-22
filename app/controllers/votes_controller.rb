@@ -4,6 +4,8 @@ class VotesController < ApplicationController
     @vote = Vote.new(article_id: params[:article_id], user_id: current_user.id)
     @category = Category.find(params[:category_id])
     if @vote.save
+      @category.priority +=1
+      @category.save
       redirect_to @category,
       notice: 'Thanks for your vote'
     else
@@ -15,7 +17,9 @@ class VotesController < ApplicationController
   def destroy
     @vote = Vote.find_by(article_id: params[:article_id], user_id: current_user.id)
     @category = Category.find(params[:category_id])
-    if @vote.destroy
+    if @vote && @vote.destroy
+      @category.priority -=1
+      @category.save
       redirect_to @category,
       notice: 'You can vote again'
     else
