@@ -27,12 +27,20 @@ module ApplicationHelper
   def continue_reading(article)
     link_to 'continue reading' unless article.body.length < 150 
   end
-
   def print_article_errors(article)
-    'shared/error_message' if article.errors.any?
+    if article.errors.any?
+      'shared/error_message'
+    else
+      'shared/empty' 
+    end
   end
 
+
   def print_user_errors(user)
-    'shared/user_errors' if user.errors.any?
+    if user.errors.any?
+      'shared/user_errors'
+    else
+      'shared/empty'
+    end
   end
 end

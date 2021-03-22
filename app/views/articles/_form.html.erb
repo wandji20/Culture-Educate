@@ -2,7 +2,7 @@
   <div class="col-4">
     <%= form_for @article do |f| %>
       <div class="row my-2">
-        <%= print_article_errors(@article) %>
+        <%= render print_article_errors(@article) %>
       </div> 
       <div class="form-group">
         <%= f.label :title, class:'form-label mb-1' %>
