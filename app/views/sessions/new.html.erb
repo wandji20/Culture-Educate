@@ -2,8 +2,8 @@
   <div class="col-sm-8 col-md-6">
     <%= form_tag sessions_path do %>
       <%= label_tag :name, 'Name', class: 'form-label' %>
-      <%= text_field_tag :name, nil, placeholder: 'Enter Account Name', class:'form-control' %>
-      <%= submit_tag 'Log In' %>
+      <%= text_field_tag :name, nil, placeholder: 'Enter Account Name', class:'form-control mb-2' %>
+      <%= submit_tag 'Log In', class: 'btn btn-success' %>
     <% end %>
   </div>
 </div>

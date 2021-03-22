@@ -15,17 +15,17 @@ module ApplicationHelper
     end
   end
 
-  def signed_in_details
+  def signed_in_details()
     if current_user
-      'layout/signed_in_details'
+      'layouts/signed_in_details'
     else
       'shared/empty'
     end
   end
 
-  def signed_out_details
-    if current_user
-      'layout/signed_out_details'
+  def signed_out_details()
+    if current_user.nil?
+      'layouts/signed_out_details'
     else
       'shared/empty'
     end
