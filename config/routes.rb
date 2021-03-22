@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :articles, only: [:new, :create, :destroy, :edit]
   resources :categories, only: [:show]
-  resources :votes, only: [:new, :create, :destroy]
+  resources :votes, only: [ :create, :destroy]
   # get 'logout', to: 'sessions#destroy', as: 'logout'
   # get 'new_login', to: 'sessions#new', as: 'new_login'
   # post 'login', to: 'sessions#create', as: 'login'

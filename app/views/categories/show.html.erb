@@ -10,6 +10,10 @@
         <div class=' bg-light'>
           <h6><%= article.title %></h6>
           <p><%= article.body %></p>
+          <div>
+            <span><%= link_to 'Upvote', votes_path(article_id: article.id, category_id: params[:id]), method: :post%></span>
+            <span><%= link_to 'Downvote', vote_path(article_id: article.id, category_id: params[:id]), method: :delete  %></span>
+          </div>
         </div>
       </article>
     <% end %>
