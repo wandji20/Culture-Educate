@@ -1,0 +1,12 @@
+<article class='article-page'>
+  <figure class='w-25'>
+    <%= image_tag @article.image_url, class: 'image' if @article.image %>        
+  </figure>
+  <div class=' bg-light article_details'>
+    <h6><%= @article.title %></h6>
+    </p><%= @article.body %><p>
+    <div class='article_vote'>
+      <span><%= upvote_or_downvote(@article) %></span>
+    </div>
+  </div>
+</article>

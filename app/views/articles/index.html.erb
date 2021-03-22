@@ -10,18 +10,15 @@
         <h5><%= @most_popular.title %></h5>
       <% end %>    
     </article>
-    <div class="side-content">
-    <p>something extra I like</p>
-    </div>
   </div>
   <section class="top-category">
     <% @categories.each do |category| %>
       <article class="">
         
-        <% if category.articles.order(:created_at).first %>
-          <%= image_tag category.articles.order(:created_at).last.image_url, class: 'image' if category.articles.order(:created_at).last.image %>
+        <% unless category.articles.empty? %>
+          <%= image_tag category.articles.last.image_url, class: 'image' if category.articles.last.image %>
           <h5><%= link_to category.name, category %></h5>
-          <h6><%= category.articles.order(:created_at).last.title %></h6>
+          <h6><%= category.articles.last.title %></h6>
         <% end %>
       
       </article>

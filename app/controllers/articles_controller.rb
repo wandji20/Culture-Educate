@@ -2,8 +2,12 @@ class ArticlesController < ApplicationController
   before_action :set_article
 
   def index
-    @categories = Category.all.includes(:articles)
-    @most_popular = Article.first
+    @categories = Category.includes(:articles).order(priority: :desc)
+    @most_popular = Vote.group(:article).count.first[0]
+  end
+
+  def show
+    @article = Article.find(params[:id])
   end
 
   def new

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root 'articles#index'
   resources :users, only: [:index, :create, :new, :show]
   resources :sessions, only: [:new, :create, :destroy]
-  resources :articles, only: [:new, :create, :destroy, :edit]
+  resources :articles, only: [:new, :create, :destroy, :show]
   resources :categories, only: [:show]
   resources :votes, only: [ :create, :destroy]
   # get 'logout', to: 'sessions#destroy', as: 'logout'

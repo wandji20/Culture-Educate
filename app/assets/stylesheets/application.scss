@@ -97,7 +97,7 @@ img.image {
 
 .most-popular {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 1fr;
 }
 .most-popular article {
   height: 60vh;
@@ -142,4 +142,8 @@ img.image {
   position: absolute;
   bottom: 8px;
   left: 16px;
+}
+
+.article-show img {
+  float: right;
 }
