@@ -9,12 +9,8 @@
         </figure>
         <div class=' bg-light article_details'>
           <h6><%= article.title %></h6>
-          <% if article.body.length > 150%>
-            </p><%= article.body.truncate(150)%><p>
-            </p><%= link_to 'continue reading', article %><p> 
-          <% else %>
-            </p><%= article.body %><p>
-          <% end %>
+          <%= truncate_or_not(article) %>
+          <%= continue_reading(article) %>
           <div class='article_vote'>
             <span><%= upvote_or_downvote(article) %></span>
           </div>

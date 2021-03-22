@@ -2,7 +2,6 @@ class ArticlesController < ApplicationController
   before_action :set_article
 
   def index
-    # @categories = Category.includes(:articles).order(priority: :desc)
     @category_article = Category.includes(:articles).order(priority: :desc).map do |category|
       [category, category.articles.last]
     end
@@ -15,8 +14,6 @@ class ArticlesController < ApplicationController
 
   def new
     @article = current_user.authored_articles.new
-    @article.categories.new
-    #@category_options = Category.all.map{ |category| [category.name, category.id]}
   end
 
   def create

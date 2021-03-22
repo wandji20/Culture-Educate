@@ -6,6 +6,4 @@ class Article < ApplicationRecord
   has_many :votes, dependent: :destroy
   
   include ImageUploader::Attachment(:image)
-
-  # accepts_nested_attributes_for :categories 
 end
