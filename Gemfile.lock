@@ -317,6 +317,7 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   jquery-rails (~> 4.4)
   listen (~> 3.3)
+  marcel (~> 0.3.3)
   pg (~> 1.1)
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)

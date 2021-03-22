@@ -8,6 +8,7 @@ gem 'rubocop', '~>0.81.0'
 gem 'sprockets-rails', '~> 3.2', '>= 3.2.2'
 
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.7'
+gem 'marcel', '~> 0.3.3'
 
 gem 'image_processing', '~> 1.2'
 gem 'shrine', '~> 3.3'
