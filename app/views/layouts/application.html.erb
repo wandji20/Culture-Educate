@@ -15,15 +15,8 @@
       <header>
         <%= render 'shared/navbar' %>
       </header>
-      <!-- <p class="row bg-white justify-content-center"> <%= flash_message %> </p> -->
-      
-      <% if notice %>
-        <p class="row bg-success justify-content-center"> <%=notice %> </p>
-      <% end %>
-      <% if alert %>
-        <p class="row bg-danger justify-content-center"> <%=alert %> </p>
-      <% end %>
-      
+      <%= render flash_alert() %>
+      <%= render flash_notice() %>
       <%= yield %>
       
     </div>

@@ -1,9 +1,17 @@
 module ApplicationHelper
-  def flash_message
+  def flash_notice()
     if notice
-      notice
-    elsif alert
-      alert
+      'shared/notice'
+    else
+      'shared/empty'
+    end
+  end
+
+  def flash_alert()
+    if alert
+      'shared/alert'
+    else
+      'shared/empty'
     end
   end
 
