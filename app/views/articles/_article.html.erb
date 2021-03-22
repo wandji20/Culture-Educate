@@ -1,22 +1,13 @@
 
- <!--<article class='d-flex col-6'>
+<article class='d-flex col-6'>
   <figure class=' w-50 mr-2'>
     <%= image_tag article.image_url, class: 'image' if article.image %>
   </figure>
   <div class='d-flex justify-content-center flex-column w-50 ml-2 bg-light'>
     <h5><%= article.categories.first.name %></h5>
     <h6><%= article.title %></h6>
-    <% if article.body.length > 100%>
-      </p><%= article.body.truncate(100)%><p>
-      </p><%= link_to 'continue reading', article%><p> 
-    <% else %>
-      </p><%= article.body %><p>
-    <% end %>
- 
+    <p><%= truncate_or_not(article) %></p>
+    <p><%= continue_reading(article) %></p>
+    
   </div>
 </article>
--->
-
-
-
-

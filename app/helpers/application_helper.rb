@@ -15,4 +15,17 @@ module ApplicationHelper
       link_to 'Downvote', vote_path(article_id: article.id, category_id: params[:id]), method: :delete
     end
   end
+
+  def truncate_or_not(article)
+    if article.body.length > 150
+      article.body.truncate(150)
+    else
+      article.body
+    end
+  end
+
+  def continue_reading(article)
+    link_to 'continue reading' unless article.body.length < 150 
+  end
+
 end
