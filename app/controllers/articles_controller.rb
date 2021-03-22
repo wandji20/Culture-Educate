@@ -2,7 +2,10 @@ class ArticlesController < ApplicationController
   before_action :set_article
 
   def index
-    @categories = Category.includes(:articles).order(priority: :desc)
+    # @categories = Category.includes(:articles).order(priority: :desc)
+    @category_article = Category.includes(:articles).order(priority: :desc).map do |category|
+      [category, category.articles.last]
+    end
     @most_popular = Vote.group(:article).count.first[0]
   end
 

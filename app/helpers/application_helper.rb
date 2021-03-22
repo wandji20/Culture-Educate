@@ -43,4 +43,8 @@ module ApplicationHelper
       'shared/empty'
     end
   end
+
+  def display_image(article)
+    image_tag article.image_url, class: 'image' if article && article.image
+  end
 end
