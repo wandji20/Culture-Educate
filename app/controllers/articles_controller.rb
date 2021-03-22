@@ -21,21 +21,20 @@ class ArticlesController < ApplicationController
 
     if @article.save
       redirect_to root_path,
-      notice: 'Article successfully created'
+                  notice: 'Article successfully created'
     else
       render :new,
-      alert: 'Please check the form and re-submit'
+             alert: 'Please check the form and re-submit'
     end
   end
 
   private
+
   def article_params
-    params.require(:article).permit(:title, :body, :image, :category_ids =>[], categories_attributes: [:id, :name])
+    params.require(:article).permit(:title, :body, :image, category_ids: [], categories_attributes: %i[id name])
   end
 
   def set_article
-    unless current_user
-      redirect_to new_session_path
-    end
+    redirect_to new_session_path unless current_user
   end
 end

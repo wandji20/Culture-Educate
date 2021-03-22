@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :sign_in, except: [:new, :create]
+  before_action :sign_in, except: %i[new create]
 
   def index; end
 
