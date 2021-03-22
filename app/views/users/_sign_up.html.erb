@@ -2,15 +2,9 @@
 <div class = 'row d-flex justify-content-center sign-up-form'>
   <div class="col-sm-8 col-md-5 ">
     <%= form_for @user do |f|%>
-      <ul>
-        <%if @user.errors.any?  %>
-              <% @user.errors.full_messages.each do |msg| %>
-              <li>
-              <%=msg %>
-              </li>
-            <%end %>
-        <% end %>
-      </ul>
+      <div class="row my-2">
+        <%= render print_user_errors(@user) %>
+      </div> 
       <%= f.label :name, 'Name', class: 'form-label mb-2' %>
       <%= f.text_field :name, placeholder: 'Input name', class:'form-control mb-2'%>
       <%= f.submit 'Sign Up' %>
