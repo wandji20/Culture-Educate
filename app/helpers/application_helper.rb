@@ -34,9 +34,9 @@ module ApplicationHelper
   def upvote_or_downvote(article)
     @vote = Vote.find_by(article: article, user: current_user)
     if @vote
-      link_to 'Downvote', vote_path(article_id: article.id, category_id: params[:id]), method: :delete
+      link_to 'Downvote', vote_path(article_id: article.id, category_id: params[:id]), method: :delete, class: 'btn btn-danger'
     else
-      link_to 'Upvote', votes_path(article_id: article.id, category_id: params[:id]), method: :post
+      link_to 'Upvote', votes_path(article_id: article.id, category_id: params[:id]), method: :post, class: 'btn btn-success'
     end
   end
 
