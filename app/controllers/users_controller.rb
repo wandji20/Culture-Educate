@@ -29,7 +29,4 @@ class UsersController < ApplicationController
     params.require(:user).permit(:name)
   end
 
-  def sign_in
-    redirect_to new_session_path unless current_user
-  end
 end

@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :set_article
+  before_action :sign_in
 
   def index
     @category_article = Category.includes(:articles).order(priority: :desc).map do |category|
@@ -32,9 +32,5 @@ class ArticlesController < ApplicationController
 
   def article_params
     params.require(:article).permit(:title, :body, :image, category_ids: [], categories_attributes: %i[id name])
-  end
-
-  def set_article
-    redirect_to new_session_path unless current_user
   end
 end
