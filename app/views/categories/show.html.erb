@@ -1,16 +1,17 @@
-<section class="mt-4 ">
+
+<section class="mt-4 w-100">
   <h3 class="row justify-content-center"> <%= @category.name %></h3>
   <div class="article_section">
     <% @articles.each do |article| %>
       
-      <article class=''>
-        <figure class=''>
+      <article class='category_article'>
+        <figure>
           <%= image_tag article.image_url, class: 'image' if article.image %>        
         </figure>
         <div class=' bg-light article_details'>
           <h6><%= article.title %></h6>
-          <%= truncate_or_not(article) %>
-          <%= continue_reading(article) %>
+          <p><%= truncate_or_not(article) %></p>
+          <p><%= continue_reading(article) %></p>
           <div class='article_vote'>
             <span><%= upvote_or_downvote(article) %></span>
           </div>

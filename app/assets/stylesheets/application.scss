@@ -50,7 +50,6 @@ li {
 footer {
   display: flex;
   justify-content: space-between;
-  // font-size: 80%;
   background: #36302e;
   margin: 0;
   height: 60px;
@@ -62,6 +61,7 @@ footer {
 
 .fa {
   margin: auto 10px;
+  color: #f76208;
 }
 
 .primary-color {
@@ -142,10 +142,20 @@ img.image {
 
 .most-popular h5 {
   position: absolute;
-  bottom: 8px;
-  left: 16px;
+  bottom: 5px;
+  left: 10px;
 }
 
 .article-show img {
   float: right;
+}
+
+.article_details {
+  position: relative;
+}
+
+.article_vote {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
 }

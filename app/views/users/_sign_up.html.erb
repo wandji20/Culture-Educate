@@ -1,6 +1,6 @@
 
-<div class = 'row d-flex justify-content-center sign-up-form mt-5'>
-  <div class="col-sm-8 col-md-5 ">
+<div class = 'row d-flex justify-content-center mt-5'>
+  <div class="col-sm-8 col-md-5 mt-5 ">
     <%= form_for @user do |f|%>
       <div class="row my-2">
         <%= render print_user_errors(@user) %>
@@ -11,3 +11,4 @@
     <% end %>
   </div>
 </div>
+<%= render 'shared/footer' %>
