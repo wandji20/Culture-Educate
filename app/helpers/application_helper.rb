@@ -77,10 +77,6 @@ module ApplicationHelper
   end
 
   def display_most_popular_title(array)
-    if array.any?
-      link_to @most_popular[0].title, @most_popular[0], class: 'secondary-color'
-    else
-      nil
-    end
+    link_to @most_popular[0].title, @most_popular[0], class: 'secondary-color' if array.any?
   end
 end
