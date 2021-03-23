@@ -10,7 +10,7 @@
 
 ## About
 
-Culture-Educate is a rails App built on the bases of Ruby on Rails Evaluation in Microverse school for remote developers. When signed_in on Culture-Educate, the user can see all created articles classified by categories. Also the signed_in user can create an article, upvote and downvote a voted article.
+Culture-Educate is a rails App built on the basis of Ruby on Rails Evaluation in Microverse school for remote developers. When signed_in on Culture-Educate, the user can see all created articles classified by categories. Also, the signed_in user can create an article, upvote, and downvote a voted article
 
 ## Live Link
 
