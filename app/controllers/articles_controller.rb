@@ -2,10 +2,12 @@ class ArticlesController < ApplicationController
   before_action :sign_in
 
   def index
-    @category_article = Category.includes(:articles).order(priority: :desc).map do |category|
-      [category, category.articles.last]
-    end
-    @most_popular = Vote.group(:article).count.first ?  Vote.group(:article).count.first[0] : Article.order(created_at: :desc).first
+    @category_article = Category.includes(:articles)
+      .order(priority: :desc).map do |category|
+        [category, category.articles.last]
+      end
+    @article_category_hash = Vote.group(:article).count.first
+    @most_popular = @article_category_hash ? @article_category_hash[0] : Article.order(created_at: :desc).first
   end
 
   def show
@@ -31,6 +33,7 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :body, :image, category_ids: [], categories_attributes: %i[id name])
+    params.require(:article).permit(:title, :body, :image, category_ids: [],
+                                                           categories_attributes: %i[id name])
   end
 end

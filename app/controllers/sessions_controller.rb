@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       redirect_to root_path,
                   notice: "Welcome #{current_user.name}\n You have successfully signed in"
     else
-      flash[:alert] = "Please Enter a valid name"
+      flash[:alert] = 'Please Enter a valid name'
       render :new
     end
   end

@@ -34,9 +34,13 @@ module ApplicationHelper
   def upvote_or_downvote(article)
     @vote = Vote.find_by(article: article, user: current_user)
     if @vote
-      link_to 'Downvote', vote_path(article_id: article.id, category_id: params[:id]), method: :delete, class: 'btn btn-danger'
+      link_to 'Downvote', vote_path(article_id: article.id, category_id: params[:id]),
+              method: :delete,
+              class: 'btn btn-danger'
     else
-      link_to 'Upvote', votes_path(article_id: article.id, category_id: params[:id]), method: :post, class: 'btn btn-success'
+      link_to 'Upvote', votes_path(article_id: article.id, category_id: params[:id]),
+              method: :post,
+              class: 'btn btn-success'
     end
   end
 
@@ -69,6 +73,6 @@ module ApplicationHelper
   end
 
   def display_image(article)
-    image_tag article.image_url, class: 'image' if article && article.image
+    image_tag article.image_url, class: 'image' if article&.image
   end
 end

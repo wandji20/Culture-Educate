@@ -31,7 +31,8 @@ class VotesController < ApplicationController
   end
 
   private
+
   def set_article
-    redirect_to new_article_path unless Article.count.positive? 
+    redirect_to new_article_path unless Article.count.positive?
   end
 end
