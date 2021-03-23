@@ -3,7 +3,8 @@
     <article class="">
         <%= display_image(@most_popular[0]) %>
         <h4>All About Diverse Cultures in One Place</h4>
-        <h5><%= link_to @most_popular[0].title, @most_popular[0], class: 'secondary-color' %></h5>
+        <h5><%= display_most_popular_title(@most_popular) %></h5>
+        <h5><%=  %></h5>
     </article>
   </div>
   <section class="top-category">
@@ -11,8 +12,9 @@
       <article class="">
         <%= display_image(array[1]) %>
         <h5><%= link_to array[0].name, array[0], class: 'secondary-color' %></h5>
-        <h6><%= link_to array[1].title, array[1], class: 'secondary-color' if array[1] %></h6> 
+        <h6><%= display_most_popular_title(array) %></h6> 
       </article>
     <% end %>
   </section>
 </div>
+<%= render 'shared/footer' %>

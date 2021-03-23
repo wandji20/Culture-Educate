@@ -31,7 +31,11 @@ class ArticlesController < ApplicationController
 
   def most_popular
     @article_hash = Vote.group(:article).count
-    @article_hash.max_by { |_article, article_counts| article_counts }
+    if @article_hash.empty?
+      [Article.first, nil]
+    else
+      @article_hash.max_by { |_article, article_counts| article_counts }
+    end
   end
 
   def article_params

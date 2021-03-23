@@ -4,8 +4,8 @@
     <%= image_tag article.image_url, class: 'image' if article.image %>
   </figure>
   <div class='d-flex justify-content-center flex-column w-50 ml-2 bg-light'>
-    <h5><%= article.categories.first.name %></h5>
-    <h6><%= article.title %></h6>
+    <h4><%= article.categories.first.name %></h4>
+    <h5><%= article.title %></h5>
     <p><%= truncate_or_not(article) %></p>
     <p><%= continue_reading(article) %></p> 
   </div>

@@ -75,7 +75,7 @@ footer {
 .article_section {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 5px;
+  grid-gap: 2px;
 }
 
 article,
@@ -87,7 +87,7 @@ figure {
 .article_section article {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 5px;
+  grid-gap: 2px;
 }
 
 img.image {
@@ -156,6 +156,10 @@ img.image {
 
 .article_vote {
   position: absolute;
-  bottom: 2px;
+  bottom: 10px;
   right: 2px;
+}
+
+section .authored-articles {
+  margin-top: 1000px;
 }
