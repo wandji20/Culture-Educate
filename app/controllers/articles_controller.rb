@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
   def index
     @category = Category.includes(:articles).order(:priority)
     @category_article = @category.map { |c| [c, c.articles.order(created_at: :desc).first] }
-    @most_popular = most_popular
+    @most_popular = most_popular[0]
   end
 
   def show

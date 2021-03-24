@@ -76,7 +76,7 @@ module ApplicationHelper
     image_tag article.image_url, class: 'img-fluid' if article&.image
   end
 
-  def display_most_popular_title(array)
-    link_to @most_popular[0].title, @most_popular[0], class: 'secondary-color' if array.any?
+  def display_most_popular_title(article)
+    link_to article.title, article, class: 'secondary-color' if article
   end
 end
