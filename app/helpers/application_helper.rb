@@ -45,15 +45,15 @@ module ApplicationHelper
   end
 
   def truncate_or_not(article)
-    if article.body.length > 150
-      article.body.truncate(150)
+    if article.body.length > 100
+      article.body.truncate(100)
     else
       article.body
     end
   end
 
   def continue_reading(article)
-    link_to 'continue reading', article unless article.body.length < 150
+    link_to 'continue reading', article unless article.body.length < 100
   end
 
   def print_article_errors(article)

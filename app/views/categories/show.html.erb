@@ -1,23 +1,9 @@
 
-<section class="mt-4 mx-1">
-  <h3 class="row justify-content-center"> <%= @category.name %></h3>
-  <div class="article_section">
-    <% @articles.each do |article| %>
-      
-      <article class='category_article my-2 px-1'>
-        <figure>
-          <%= image_tag article.image_url, class: 'image' if article.image %>        
-        </figure>
-        <div class=' bg-light article_details m'>
-          <h3 class ="text-center fs-"><%= article.title%></h3>
-          <p class='mx-1'><%= truncate_or_not(article) %></p>
-          <p class='ml-3'><%= continue_reading(article) %></p>
-          <div class='article_vote'>
-            <span><%= upvote_or_downvote(article) %></span>
-          </div>
-        </div>
-      </article>
-    <% end %>
+<section class="pt-2 mt-5">
+   <h3 class="row justify-content-center my-3"> <%= @category.name %></h3>
+   <div class="row my-3 pt-1">
+    <%= render @articles %>
   </div>
 </section>
 <%= render 'shared/footer' %>
+

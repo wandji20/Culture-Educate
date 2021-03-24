@@ -1,12 +1,14 @@
 
-<article class='d-flex col-6 my-2'>
+<article class='d-flex col-6 my-1'>
   <figure class=' w-50 mr-2'>
-    <%= image_tag article.image_url, class: 'image' if article.image %>
+    <%= display_image(article)%>
   </figure>
   <div class='d-flex justify-content-center flex-column w-50 ml-2 bg-light'>
-    <h4><%= article.categories.first.name %></h4>
     <h5><%= article.title %></h5>
     <p><%= truncate_or_not(article) %></p>
     <p><%= continue_reading(article) %></p> 
+    <div class='article_vote'>
+      <span><%= upvote_or_downvote(article) %></span>
+    </div>
   </div>
 </article>
