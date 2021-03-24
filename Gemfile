@@ -14,6 +14,7 @@ gem 'shrine', '~> 3.3'
 gem "shrine-cloudinary", "~> 1.1"
 
 gem "marcel", "~> 0.3"
+gem 'dotenv-rails'
 
 gem 'table_print', '~> 1.5', '>= 1.5.7'
 
@@ -45,7 +46,6 @@ gem 'bootsnap', '>= 1.4.4', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'dotenv-rails'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
 end
