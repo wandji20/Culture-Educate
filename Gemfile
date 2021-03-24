@@ -13,6 +13,8 @@ gem 'image_processing', '~> 1.2'
 gem 'shrine', '~> 3.3'
 gem "shrine-cloudinary", "~> 1.1"
 
+gem "marcel", "~> 0.3"
+
 gem 'table_print', '~> 1.5', '>= 1.5.7'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
