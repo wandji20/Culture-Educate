@@ -4,10 +4,9 @@ class VotesController < ApplicationController
 
   def create
     @vote = Vote.new(article_id: params[:article_id], user_id: current_user.id)
-    @category = Category.find(params[:category_id])
+    @article = Article.find(params[:article_id])
     if @vote.save
-      @category.priority += 1
-      @category.save
+      @article.categories.update_all(priority: +=1)
       redirect_to @category,
                   notice: 'Thanks for your vote'
     else
