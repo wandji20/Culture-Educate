@@ -6,8 +6,12 @@ class VotesController < ApplicationController
     @vote = Vote.new(article_id: params[:article_id], user_id: current_user.id)
     @article = Article.find(params[:article_id])
     if @vote.save
-      @article.categories.update_all(priority: +=1)
-      redirect_to @category,
+      @article.categories = @article.categories.map do |category|
+        category.priority += 1
+        category.save
+        category
+      end
+      redirect_to @article,
                   notice: 'Thanks for your vote'
     else
       redirect_to root_path,
