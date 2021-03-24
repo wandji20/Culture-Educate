@@ -9,9 +9,9 @@ gem 'sprockets-rails', '~> 3.2', '>= 3.2.2'
 
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.7'
 
-gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.12', '>= 1.12.1'
 gem 'shrine', '~> 3.3'
-gem 'shrine-cloudinary', '~> 1.1'
+gem 'shrine-cloudinary', '~> 1.1', '>= 1.1.1'
 
 gem 'table_print', '~> 1.5', '>= 1.5.7'
 
