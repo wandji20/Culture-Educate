@@ -10,8 +10,6 @@ gem 'sprockets-rails', '~> 3.2', '>= 3.2.2'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.7'
 
 gem 'image_processing', '~> 1.2'
-gem 'shrine', '~> 3.3'
-gem 'shrine-cloudinary', '~> 1.1'
 
 gem 'table_print', '~> 1.5', '>= 1.5.7'
 
@@ -39,6 +37,10 @@ gem 'jbuilder', '~> 2.7'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
+gem 'image_processing', '~> 1.2'
+gem 'shrine', '~> 3.3'
+gem 'shrine-cloudinary', '~> 1.1'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
