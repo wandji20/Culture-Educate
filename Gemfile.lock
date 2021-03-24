@@ -315,7 +315,7 @@ DEPENDENCIES
   capybara (>= 3.26)
   dotenv-rails
   font-awesome-rails (~> 4.7, >= 4.7.0.7)
-  image_processing (~> 1.12, >= 1.12.1)
+  image_processing (~> 1.2)
   jbuilder (~> 2.7)
   jquery-rails (~> 4.4)
   listen (~> 3.3)
@@ -329,7 +329,7 @@ DEPENDENCIES
   selenium-webdriver
   shoulda-matchers
   shrine (~> 3.3)
-  shrine-cloudinary (~> 1.1, >= 1.1.1)
+  shrine-cloudinary (~> 1.1)
   spring
   sprockets-rails (~> 3.2, >= 3.2.2)
   table_print (~> 1.5, >= 1.5.7)
