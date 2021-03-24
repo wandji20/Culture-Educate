@@ -24,6 +24,8 @@ feature 'Article', type: :feature do
 
     scenario 'should be Successfull' do
       click_link 'Upvote'
+      click_link 'Privacy'
+      visit "categories/#{categories(:category3).id}"
       click_link 'Downvote'
       expect(page).to have_content('You can vote again')
     end

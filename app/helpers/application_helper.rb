@@ -73,7 +73,7 @@ module ApplicationHelper
   end
 
   def display_image(article)
-    image_tag article.image_url, class: 'image' if article&.image
+    image_tag article.image_url, class: 'img-fluid' if article&.image
   end
 
   def display_most_popular_title(array)

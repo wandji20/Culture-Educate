@@ -1,12 +1,18 @@
-<div class='mt-5'>
-  <article class='article-page'>
-    <figure class='w-25'>
-      <%= image_tag @article.image_url, class: 'image' if @article.image %>        
+<div class='article_page'>
+  <article class=''>
+    <figure class='w-25 float-start'>
+      <%= image_tag @article.image_url, class: 'img-fluid rounded ' if @article.image %>      
     </figure>
     <div class=' bg-light article_details'>
       <h6><%= @article.title %></h6>
       </p><%= @article.body %><p>
+      
     </div>
+    <p><span class ='h4'>Author</span>
+        <span class ='h4'>
+          <%= @article.author.name.downcase.capitalize %>
+        </span> 
+      </p> 
   </article>
-  <%= render 'shared/footer' %>
 </div>
+<%= render 'shared/footer' %>

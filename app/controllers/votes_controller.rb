@@ -21,14 +21,17 @@ class VotesController < ApplicationController
 
   def destroy
     @vote = Vote.find_by(article_id: params[:article_id], user_id: current_user.id)
-    @category = Category.find(params[:category_id])
+    @article = Article.find(params[:article_id])
     if @vote&.destroy
-      @category.priority -= 1
-      @category.save
-      redirect_to @category,
+      @article.categories = @article.categories.map do |category|
+        category.priority -= 1
+        category.save
+        category
+      end
+      redirect_to @article,
                   notice: 'You can vote again'
     else
-      redirect_to @category,
+      redirect_to @article,
                   alert: "Can't Downvote article if you have not Upvoted"
     end
   end

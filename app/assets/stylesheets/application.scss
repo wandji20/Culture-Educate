@@ -23,7 +23,7 @@
 }
 
 nav {
-  margin: auto -15px;
+  margin: auto -17px;
 }
 
 nav a {
@@ -72,90 +72,71 @@ footer {
   color: #f76208;
 }
 
-.article_section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 2px;
+.section_for_articles {
+  margin-top: 70px;
 }
 
-article,
-figure {
-  width: 100%;
-  height: 30vh;
+.home {
+  margin: 55px -12px 0 -14px;
 }
 
-.article_section article {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 2px;
-}
-
-img.image {
-  width: 100%;
-  height: 100%;
+.img-fluid {
+  max-height: 100%;
   max-width: 100%;
+  object-fit: cover;
+  width: 100%;
 }
 
-.most-popular {
+.most_popular {
   display: grid;
   grid-template-columns: 1fr;
-}
-
-.most-popular article {
-  height: 60vh;
+  grid-template-rows: 60vh;
   position: relative;
 }
 
-.side-content {
-  background-color: brown;
-  height: 60vh;
-}
-
-.top-category {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-.top-category article {
-  position: relative;
-  width: 100%;
-  height: 25vh;
-}
-
-.top-category h5 {
+.most_popular h4 {
   position: absolute;
-  top: 8px;
-  left: 16px;
+  top: 5px;
+  left: 5px;
+  color: #f76208;
 }
 
-.top-category h6 {
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
-}
-
-.most-popular h4 {
-  position: absolute;
-  top: 8px;
-  left: 16px;
-}
-
-.most-popular h5 {
+.most_popular h5 {
   position: absolute;
   bottom: 5px;
-  left: 10px;
+  left: 5px;
 }
 
-.article-show img {
-  float: right;
+.articles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
 }
 
-.article_details {
+.article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 35vh;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 30vh;
+}
+
+.category_article {
   position: relative;
 }
 
-.article_vote {
+.categories h5 {
   position: absolute;
-  bottom: 10px;
-  right: 15px;
+  top: 3px;
+  left: 3px;
+}
+
+.categories h6 {
+  position: absolute;
+  bottom: 3px;
+  left: 3px;
 }
