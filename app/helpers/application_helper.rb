@@ -53,7 +53,7 @@ module ApplicationHelper
   end
 
   def continue_reading(article)
-    link_to 'continue reading', article ,class: 'secondary-color' unless article.body.length < 120
+    link_to 'continue reading', article, class: 'secondary-color' unless article.body.length < 120
   end
 
   def print_article_errors(article)
