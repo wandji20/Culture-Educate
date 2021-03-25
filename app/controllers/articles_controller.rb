@@ -2,13 +2,13 @@ class ArticlesController < ApplicationController
   before_action :sign_in
 
   def index
-    @category = Category.includes(:articles).order(:priority)
+    @category = Category.includes(:articles).order(priority: :desc)
     @category_article = @category.map { |c| [c, c.articles.order(created_at: :desc).first] }
     @most_popular = most_popular[0]
   end
 
   def show
-    @article = Article.find(params[:id])
+    @article = Article.where('id = ?',params[:id]).includes(:author, :votes).first
   end
 
   def new
@@ -30,7 +30,7 @@ class ArticlesController < ApplicationController
   private
 
   def most_popular
-    @article_hash = Vote.group(:article).count
+    @article_hash = Vote.includes(:article).group(:article).count
     if @article_hash.empty?
       [Article.first, nil]
     else
