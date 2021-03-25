@@ -13,8 +13,8 @@
       </p><%= @article.body %><p>
       
     </div>
-    <p><span class ='h4'>Author</span>
-        <span class ='h4'>
+    <p><span class ='h4'>Author:</span>
+        <span class ='h4 ml-2'>
           <%= @article.author.name.downcase.capitalize %>
         </span>
         <span class = 'ml-5'><%= upvote_or_downvote(@article) %></span>
