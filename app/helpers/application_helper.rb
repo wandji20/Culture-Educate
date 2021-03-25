@@ -72,7 +72,9 @@ module ApplicationHelper
     end
   end
 
-  def display_image(article); end
+  def display_image(article)
+    image_tag article.image, class: 'img-fluid' if article&.image
+  end
 
   def display_most_popular_title(article)
     link_to article.title, article, class: 'secondary-color' if article
