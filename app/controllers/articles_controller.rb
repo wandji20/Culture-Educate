@@ -8,7 +8,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @article = Article.where('id = ?',params[:id]).includes(:author, :votes).first
+    @article = Article.where('id = ?', params[:id]).includes(:author, :votes).first
   end
 
   def new
