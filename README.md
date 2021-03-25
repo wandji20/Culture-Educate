@@ -35,7 +35,7 @@ To get a local copy up and running follow these simple example steps:
 
 - Fork this project
 - Open your terminal
-- Clone this project `git clone git@github.com:wandji20/Culture-Educate.git`
+- Clone this project `git clone https://github.com/wandji20/Culture-Educate.git`
 - Go to the project folder `cd Culture-Educate`
 
 ### Prerequisites
