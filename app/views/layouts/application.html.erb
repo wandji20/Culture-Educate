@@ -11,12 +11,12 @@
   </head>
 
   <body>
+      <%= render flash_alert() %>
+      <%= render flash_notice() %>
     <div class="container-fluid ">
       <header>
         <%= render 'shared/navbar' %>
       </header>
-      <%= render flash_alert() %>
-      <%= render flash_notice() %>
       <%= yield %>
       
     </div>

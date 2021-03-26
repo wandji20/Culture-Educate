@@ -73,7 +73,10 @@ module ApplicationHelper
   end
 
   def display_image(article)
-    image_tag article.image, class: 'img-fluid' if article&.image
+    condition = article&.image&.attached? &&
+                article.image.attachment.blob.present? && article.image.attachment.blob.persisted?
+
+    image_tag article.image, class: 'img-fluid' if condition
   end
 
   def display_most_popular_title(article)

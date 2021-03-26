@@ -4,6 +4,7 @@ RSpec.describe Article, type: :model do
   context 'Validation' do
     it { should validate_presence_of(:title) }
     it { should validate_presence_of(:body) }
+    it { should validate_presence_of(:image) }
     it { should validate_presence_of(:categories) }
     it {
       should validate_length_of(:body)
@@ -16,6 +17,6 @@ RSpec.describe Article, type: :model do
     it { should have_many(:votes) }
     it { should belong_to(:author) }
     it { should have_db_column(:body) }
-    it { should have_db_column(:image_data) }
+    it { should have_one_attached(:image) }
   end
 end
