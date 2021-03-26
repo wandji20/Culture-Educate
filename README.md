@@ -5,8 +5,13 @@
 ## App screenshot
 
 <img src="./docs/screen.png" width="100%"/>
+<img src="./docs/screen1.png" width="100%"/>
+<img src="./docs/screen2.png" width="100%"/>
+<img src="./docs/screen3.png" width="100%"/>
 
 ## [Presentation Project Video](https://www.loom.com/share/4e44ed7848344fd182e383c0f5a73ade)
+
+## [Presentation Project Video](https://www.loom.com/share/cfa58d9b4c5f4da1aceba2f32e1d627a)
 
 ## About
 
@@ -14,7 +19,7 @@ Culture-Educate is a rails App built on the basis of Ruby on Rails Evaluation in
 
 ## Live Link
 
-[Culture-Educate](https://stormy-hamlet-28552.herokuapp.com/)
+[Culture-Educate](https://quiet-garden-35037.herokuapp.com/)
 
 ## Built With
 
