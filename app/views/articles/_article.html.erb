@@ -1,7 +1,9 @@
 
 <article class='article bg-light '>
   <figure class= ''>
-    <%= display_image(article)%>
+    <%= link_to article do %>
+      <%= display_image(article)%>
+    <% end %>
   </figure>
   <div class='bg-light px-3'>
     <h5 class='secondary-color'><%= @category.name if @category %></h5>
