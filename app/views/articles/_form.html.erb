@@ -1,0 +1,43 @@
+<div class="row justify-content-center my-5">
+  <div class="col-4">
+    <%= form_for @article do |f| %>
+      <div class="row my-2">
+        <%= render print_article_errors(@article) %>
+      </div> 
+      <div class="form-group">
+        <%= f.label :title, class:'form-label mb-1' %>
+        <%= f.text_field :title, class:'form-control mb-1', placeholder: 'title' %>
+        <%= f.label :body, class:'form-label mb-1' %>
+        <%= f.text_area :body, class:'form-control mb-1', placeholder: 'Write about your culture',cols: 30, rows: 7 %>
+      </div>
+      <div class="field form-group">
+        <%= f.label :image , 'Add article cover image', class: 'form-label'%>
+        <%= f.file_field :image %>
+      </div>
+
+      <div class="form-group mt-2 ">
+        <%= f.label :categories, 'Add Article Categories', class: 'form-label'%>
+        <div>
+          <%= f.collection_check_boxes(:category_ids, Category.all, :id, :name) do |b| %>
+            <%= b.label class:"form-check-label mx-1" do%>
+            <%=b.check_box + "  " + b.text%>
+            <%end%>
+          <% end %>
+        </div>
+      </div>
+
+      <%= f.fields_for :categories do |c| %>
+        <div class="form-group">
+          <%= c.label :name  %>
+          <%= c.text_field :name, placeholder: 'add a category', class:'form-control' %>
+        </div>      
+      <% end %>
+
+      <div class="form-group">
+        <%= f.submit class:'btn btn-success mt-1' %>
+      </div>
+    <% end %>
+    
+  </div>
+</div>
+<%= render 'shared/footer' %>

@@ -2,11 +2,14 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.2'
-gem 'rubocop', '~>0.81.0'
-
 gem 'bootstrap', '~> 4.6'
 gem 'jquery-rails', '~> 4.4'
+gem 'rubocop', '~>0.81.0'
 gem 'sprockets-rails', '~> 3.2', '>= 3.2.2'
+
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.7'
+
+gem 'table_print', '~> 1.5', '>= 1.5.7'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3'
@@ -28,7 +31,11 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.2'
+
+# cloud image storage
+gem 'activestorage-cloudinary-service'
+gem 'cloudinary'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
@@ -37,6 +44,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'rspec-rails'
+  gem 'shoulda-matchers'
 end
 
 group :development do

@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :sign_in, except: %i[new create]
+
   def index; end
 
   def new
@@ -10,15 +12,15 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       redirect_to root_path,
-                  notice: "Welcome #{@user.name}\n Your Account is Ready"
+                  notice: "Welcome #{current_user.name}\n Your Account is Ready"
     else
-      render :new,
-             alert: "#{@user.name} is already taken\n Please input a name"
+      render :new
     end
   end
 
   def show
     @user = User.find(params[:id])
+    @authored_articles = current_user.authored_articles.includes(:categories, :author, :votes)
   end
 
   private
