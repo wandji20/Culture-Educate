@@ -1,24 +1,114 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Culture-Educate
 
-Things you may want to cover:
+## App screenshot
 
-* Ruby version
+<img src="./docs/screen.png" width="100%"/>
+<img src="./docs/screen1.png" width="100%"/>
+<img src="./docs/screen2.png" width="100%"/>
+<img src="./docs/screen3.png" width="100%"/>
 
-* System dependencies
+## [Presentation Project Video](https://www.loom.com/share/4e44ed7848344fd182e383c0f5a73ade)
 
-* Configuration
+## [Presentation Project Video](https://www.loom.com/share/cfa58d9b4c5f4da1aceba2f32e1d627a)
 
-* Database creation
+## About
 
-* Database initialization
+Culture-Educate is a rails App built on the basis of Ruby on Rails Evaluation in Microverse school for remote developers. When signed_in on Culture-Educate, the user can see all created articles classified by categories. Also, the signed_in user can create an article, upvote, and downvote a voted article
 
-* How to run the test suite
+## Live Link
 
-* Services (job queues, cache servers, search engines, etc.)
+[Culture-Educate](https://quiet-garden-35037.herokuapp.com/)
 
-* Deployment instructions
+## Built With
 
-* ...
+- Ruby v2.7.2
+- Ruby on Rails v6.1.3
+- PostgreSQL
+- Bootstrap
+- Rspec
+- Capybara
+- Rubocop
+- VS Code
+- Heroku
+- Cloudinary
+
+## Getting Started
+
+To get a local copy up and running follow these simple example steps:
+
+- Fork this project
+- Open your terminal
+- Clone this project `git clone https://github.com/wandji20/Culture-Educate.git`
+- Go to the project folder `cd Culture-Educate`
+
+### Prerequisites
+
+- Ruby: 2.7.2
+- Rails: 6.1.3
+- Postgres
+
+### Setup
+
+Instal gems with:
+
+```
+  bundle
+```
+
+Instal yarn and webpacker with:
+
+```
+  yarn install
+  rails webpacker:install
+```
+
+Setup database with:
+
+```
+   rails db:create
+   rails db:migrate
+```
+
+### Drive local host
+
+Start server with:
+
+```
+    rails server
+```
+
+Open `http://localhost:3000/` in your browser.
+
+### Run tests
+
+- Open terminal
+- Run tests `rspec`
+
+## Author
+
+👤 **Wandji Bertrand**
+
+- Github: [@wandji20](https://github.com/wandji20)
+- Twitter: [@wandjibertrand](https://twitter.com/wandjibertrand)
+- Linkedin: [Linkedin](https://www.linkedin.com/in/wandji-bertrand/)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/wandji20/Culture-Educate/issues/3).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Microverse
+- [Nelson Sakwa](https://www.behance.net/sakwadesignstudio)
+
+## 📝 License
+
+[MIT License](./license.txt)

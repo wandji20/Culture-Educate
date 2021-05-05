@@ -1,0 +1,20 @@
+<div class="home color-bg">
+  <article class="most_popular">
+    <%= link_to @most_popular do %>
+      <%= display_image(@most_popular) %>
+    <% end %>  
+    <h4>All About Diverse Cultures in One Place</h4>
+    <h5><%= display_most_popular_title(@most_popular) %></h5>
+  </article>
+  <section class="categories">
+    <% @category_article.each do |array| %>
+      <article class="category_article">
+        <%= link_to array[0] do %>
+          <%= display_image(array[1]) %>
+        <% end %>
+        <h5><%= link_to array[0].name, array[0], class: 'secondary-color' %></h5>
+        <h6><%= display_most_popular_title(array[1]) %></h6> 
+      </article>
+    <% end %>
+  </section>
+</div>

@@ -1,0 +1,25 @@
+
+<article class='article bg-light '>
+  <figure class= ''>
+    <%= link_to article do %>
+      <%= display_image(article)%>
+    <% end %>
+  </figure>
+  <div class='bg-light px-3'>
+    <h5 class='secondary-color'><%= @category.name if @category %></h5>
+    <h6><%= article.title %></h6>
+    <p><%= truncate_or_not(article) %></p>
+    <p>
+      <span><%= continue_reading(article) %></span>
+      <span class =" ml-5 secondary-color"><%= pluralize(article.votes.count, 'vote')+'!'%></span>
+    </p> 
+    <div class='d-flex justify-content-between pb-0 pt-1'>
+    <span class ='h6 mt-2'>Author:</span>
+      <span class ='h6 ml-n5 m-auto'>
+        <%= article.author.name.downcase.capitalize %>
+      </span>
+      <span ><%= upvote_or_downvote(article) %></span>
+    </div>
+  </div>
+  
+</article>

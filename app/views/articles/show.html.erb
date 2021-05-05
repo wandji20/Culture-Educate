@@ -1,0 +1,24 @@
+<div class='article_page text-light color-bg'>
+  <article class=''>
+    <figure class='w-25 float-start'>
+      <%= display_image(@article) %>   
+    </figure>
+    <div class=' article_details'>
+      <h6>
+        <span><%= @article.title %></span>
+        <span class =" ml-5 secondary-color"><%= pluralize(@article.votes.count, 'vote')+'!'%></span>
+       
+      </h6>
+     
+      </p><%= @article.body %><p>
+      
+    </div>
+    <p><span class ='h4'>Author:</span>
+        <span class ='h4 ml-2'>
+          <%= @article.author.name.downcase.capitalize %>
+        </span>
+        <span class = 'ml-5'><%= upvote_or_downvote(@article) %></span>
+    </p> 
+  </article>
+</div>
+<%= render 'shared/footer' %>

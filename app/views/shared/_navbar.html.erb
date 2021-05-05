@@ -1,0 +1,15 @@
+<nav class="navbar bg-light fixed-top mb-5 mx-1">
+  <%= link_to root_path class: "col-sm-3" do %>
+    <h5>CultureEducate</h5>
+  <% end %>
+
+  <ul class="navbar-nav">
+    <%= link_to new_article_path do %>
+      <li class="nav-link">NEW ARTICLE</li>
+    <% end %>
+  </ul>
+  <ul class="navbar-nav">
+    <%= render signed_in_details() %>
+    <%= render signed_out_details() %>
+  </ul>
+</nav>

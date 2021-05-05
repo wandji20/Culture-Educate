@@ -11,6 +11,14 @@
   </head>
 
   <body>
-    <%= yield %>
+      <%= render flash_alert() %>
+      <%= render flash_notice() %>
+    <div class="container-fluid ">
+      <header>
+        <%= render 'shared/navbar' %>
+      </header>
+      <%= yield %>
+      
+    </div>
   </body>
 </html>

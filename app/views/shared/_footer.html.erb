@@ -1,0 +1,32 @@
+<footer class='px-3 mt-2'>
+
+  <p class='my-auto'>
+    <%= link_to 'CultureEducate', root_path, class: 'my-auto text-white' %>
+  </p>
+
+  <ul class="d-none d-md-flex my-auto">
+    <%= link_to root_path do %>
+      <li class="link secondary-color mx-1">Privacy</li>
+    <% end %>
+    <%= link_to root_path  do %>
+      <li class="link secondary-color mx-1"> Licence</li>
+    <% end %>
+      <li class=" text-white mx-1">Copyright 2014</li>
+      <li class="text-white mx-1">All rights reserved.</li>
+  </ul>
+  <ul class="d-flex my-auto">
+    <li class='text-white' >Contact </li>
+    <%= link_to 'https://github.com/wandji20'  do %>
+      <li class="link icon "><i class="fa fa-github" aria-hidden="true"></i></li>
+      
+    <% end %>
+    <%= link_to 'https://twitter.com/wandjibertrand'  do %>
+      <li class="link icon"> <i class="fa fa-twitter" aria-hidden="true"></i></li>
+    
+    <% end %>
+    <%= link_to 'https://www.linkedin.com/in/wandji-bertrand/'  do %>
+    <li class="link icon"><i class="fa fa-linkedin" aria-hidden="true"> </li></i>
+    <% end %>
+  </ul>
+
+</footer>
