@@ -22,8 +22,12 @@
   background-color: #36302e;
 }
 
-nav {
-  margin: auto -17px;
+// nav {
+//   margin: auto -17px;
+// }
+.remove-padding {
+  padding-right: 0;
+  padding-left: 0;
 }
 
 nav a {
@@ -33,6 +37,7 @@ nav a {
 nav a:hover,
 footer a:hover {
   color: #f76208;
+  text-decoration: none;
 }
 
 .navbar-nav {
@@ -73,19 +78,7 @@ footer {
 }
 
 .section_for_articles {
-  margin-top: 65px;
   height: 100vh;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: -15px;
-  margin-right: -15px;
-}
-
-.home {
-  margin: 55px -12px 0 -14px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 10px;
 }
 
 .img-fluid {
@@ -165,9 +158,4 @@ footer {
 
 .article_page {
   height: 100vh;
-  padding-left: 25px;
-  padding-right: 25px;
-  margin-left: -15px;
-  margin-right: -15px;
-  margin-top: 59px;
 }

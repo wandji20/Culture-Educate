@@ -1,11 +1,11 @@
 
-<article class='article bg-light '>
+<article class='article bg-light m-1 '>
   <figure class= ''>
     <%= link_to article do %>
       <%= display_image(article)%>
     <% end %>
   </figure>
-  <div class='bg-light px-3'>
+  <div class='bg-light px-3 py-1'>
     <h5 class='secondary-color'><%= @category.name if @category %></h5>
     <h6><%= article.title %></h6>
     <p><%= truncate_or_not(article) %></p>
