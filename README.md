@@ -19,7 +19,7 @@ Culture-Educate is a rails App built on the basis of Ruby on Rails Evaluation in
 
 ## Live Link
 
-[Culture-Educate](https://quiet-garden-35037.herokuapp.com/)
+[Culture-Educate](https://culture-educate-wandji.herokuapp.com/)
 
 ## Built With
 
