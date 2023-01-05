@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.2'
+ruby '3.1.3'
 gem 'bootstrap', '~> 4.6'
 gem 'jquery-rails', '~> 4.4'
 gem 'rubocop', '~>0.81.0'

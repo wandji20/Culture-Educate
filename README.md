@@ -23,7 +23,7 @@ Culture-Educate is a rails App built on the basis of Ruby on Rails Evaluation in
 
 ## Built With
 
-- Ruby v2.7.2
+- Ruby v3.1.3
 - Ruby on Rails v6.1.3
 - PostgreSQL
 - Bootstrap
@@ -45,7 +45,7 @@ To get a local copy up and running follow these simple example steps:
 
 ### Prerequisites
 
-- Ruby: 2.7.2
+- Ruby: 3.1.3
 - Rails: 6.1.3
 - Postgres
 
