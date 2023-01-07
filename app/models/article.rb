@@ -9,5 +9,6 @@ class Article < ApplicationRecord
 
   accepts_nested_attributes_for :categories, reject_if: :all_blank, allow_destroy: true
   has_one_attached :image
+  has_rich_text :body
   validates :image, presence: true
 end
